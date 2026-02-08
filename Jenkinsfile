@@ -12,7 +12,7 @@ pipeline {
             parallel {
                 stage('Run npm security') {
                     steps {
-                        bat 'npm audit'
+                        bat 'npm audit --audit-level=high'
                     }
                 }
                 stage('Run UI Tests') {

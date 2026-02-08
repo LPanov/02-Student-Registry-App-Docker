@@ -7,14 +7,13 @@ pipeline {
                 bat 'npm install'
             }
         }
-        stage('Build Application') {
-            steps {
-                bat 'npm start &'
-            }
-        }
         stage('Run UI Tests') {
             steps {
-                bat 'npm test'
+                bat """
+                start /B npm start
+                timeout /t 5
+                npm test
+                """
             }
         } 
     }

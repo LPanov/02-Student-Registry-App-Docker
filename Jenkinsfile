@@ -18,8 +18,6 @@ pipeline {
                 stage('Run UI Tests') {
                     steps {
                         bat """
-                        start /B npm start
-                        timeout /t 5
                         npm test
                         """
                     }

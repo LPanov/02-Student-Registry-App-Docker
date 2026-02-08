@@ -1,1 +1,1 @@
-Exercise
+Exercise, SoftUni 2026
